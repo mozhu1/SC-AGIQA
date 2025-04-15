@@ -12,3 +12,5 @@ pip install -r requirements.txt
 
 python main.py
 
+# Generate descriptive prompts
+If you want to generate descriptive prompts on your own, we provide a code example named `chat_with_doubao.py` based on the AGIQA-1K dataset. The same principle applies to other datasets.
