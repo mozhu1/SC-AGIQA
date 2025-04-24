@@ -29,17 +29,18 @@ AIGCIQA2023K/
     └──...
 ```
 ## Run the code.
-```
-cd ./SC_AGIQA
+
+`cd ./SC_AGIQA`
 
 **1.Install the required packages**  
 
-pip install -r requirements.txt
+`pip install -r requirements.txt`
 **2.Modify the dataset directory in the configuration file and specify the configuration file for the parameters of the main function**  
 
-huggingface-cli login --token <your_token>
-python main.py
+`huggingface-cli login --token <your_token>`
+`python main.py`
 
 ## Generate descriptive prompts
+
 If you want to generate descriptive prompts on your own, we provide a code example named `chat_with_doubao.py` based on the AGIQA-1K dataset. The same principle applies to other datasets. The API can be obtained from this link https://www.volcengine.com/experience/ark
-```
+
