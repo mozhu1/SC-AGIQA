@@ -9,7 +9,29 @@ We have provided documents containing descriptive prompts in the folders of AGIQ
 
 # Run the code.
 Environment: Python 3.10
-
+```
+AGIQ1K/
+├── AIGC-1K_answer.csv
+└── file/
+    ├── image1.png
+    ├── image2.png
+    └──...
+AGIQA3K/
+├── data.csv
+├── image1.jpg
+├── image2.png
+└──...
+AIGCIQA2023K/
+├── merged_output_aigciqa2023.csv
+├── DATA/
+│   └── MOS/
+│       └── mosz1.mat
+└── Image/
+    ├── subfolder1/
+    │   ├── image1.jpg
+    │   └──...
+    └──...
+```
 cd ./SC_AGIQA
 
 pip install -r requirements.txt
