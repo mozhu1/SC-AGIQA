@@ -29,6 +29,9 @@ AIGCIQA2023K/
 ```
 ## Run the code.
 'Environment: Python 3.10.15 cuda11.8'
+
+**0.Download and extract the code**  
+
 `cd ./SC_AGIQA`
 
 **1.Install the required packages**  
