@@ -29,10 +29,11 @@ AIGCIQA2023K/
     └──...
 ```
 ## Run the code.
-*1.Modify the dataset directory in the configuration file and specify the configuration file for the parameters of the main function*
-cd ./SC_AGIQA
 
+cd ./SC_AGIQA
+**1.Install the required packages**
 pip install -r requirements.txt
+**2.Modify the dataset directory in the configuration file and specify the configuration file for the parameters of the main function**
 huggingface-cli login --token <your_token>
 python main.py
 
