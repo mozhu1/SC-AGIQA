@@ -11,3 +11,4 @@ accelerate==0.16.0
 datasets==2.11.0
 torchmetrics
 thop
+huggingface_hub
