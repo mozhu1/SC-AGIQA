@@ -40,7 +40,12 @@ AIGCIQA2023K/
 
 **2.Modify the dataset directory in the configuration file and specify the configuration file for the parameters of the main function**  
 
+**3.Log in to Hugging Face in preparation for downloading the model weights**
+
 `huggingface-cli login --token <your_token>`
+
+**4.Run main.py**
+
 `python main.py`
 
 ## Generate descriptive prompts
