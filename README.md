@@ -6,7 +6,9 @@
 Framework
 </h2>
 
-<img width="770" alt="1744720558481" src="https://github.com/user-attachments/assets/b5bfa381-4c95-4e88-8fa6-0d8a59cb2100" style="display: block; margin: 0 auto;">
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/b5bfa381-4c95-4e88-8fa6-0d8a59cb2100" alt="Descriptive Alt Text" width="500">
+</p>
 
 <h2 align="center">
 DATASET
