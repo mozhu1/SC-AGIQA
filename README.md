@@ -1,16 +1,19 @@
-# Text-Visual Semantic Constrained AI-Generated Image Quality Assessment
+<h1 align="center">
+  Text-Visual Semantic Constrained AI-Generated Image Quality Assessment
+</h1>
 
-## Framework
-
-<p align="center">
-  asdasd
-</p>
+<h2 align="center">
+Framework
+</h2>
 
 <center>
   <img width="770" alt="1744720558481" src="https://github.com/user-attachments/assets/b5bfa381-4c95-4e88-8fa6-0d8a59cb2100" /> 
 </center>
 
-## DATASET:
+<h2 align="center">
+DATASET
+</h2>
+
 We have provided documents containing descriptive prompts in the folders of AGIQA-1K, AGIQA-3K, and AIGCIQA2023. When using them, you just need to set up the paths according to the figure above and change the dataset paths in the configuration files.
 ```
 AGIQ1K/
@@ -35,7 +38,9 @@ AIGCIQA2023K/
     │   └──...
     └──...
 ```
-## Run the code.
+<h2 align="center">
+Run the code
+</h2>
 
 `Environment: Python 3.10.15 cuda11.8`
 
@@ -57,7 +62,9 @@ AIGCIQA2023K/
 
 `python main.py`
 
-## Generate descriptive prompts
+<h2 align="center">
+Generate descriptive prompts
+</h2>
 
 If you want to generate descriptive prompts on your own, we provide a code example named `chat_with_doubao.py` based on the AGIQA-1K dataset. The same principle applies to other datasets. The API can be obtained from this link https://www.volcengine.com/experience/ark
 
