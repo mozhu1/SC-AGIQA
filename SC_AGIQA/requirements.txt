@@ -6,9 +6,9 @@ fairscale
 timm
 image-reward
 clip
-diffusers==0.16.0 
-accelerate==0.16.0 
-datasets==2.11.0
+diffusers
+accelerate
+datasets
 torchmetrics
 thop
 huggingface_hub
