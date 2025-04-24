@@ -1,4 +1,4 @@
-# Text-Visual Semantic Constrained AI-Generated Image Quality Assessment 
+<h1 style="text-align: center;"> Text-Visual Semantic Constrained AI-Generated Image Quality Assessment </h1>
 
 ## Framework
 
