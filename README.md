@@ -7,7 +7,7 @@ Framework
 </h2>
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/b5bfa381-4c95-4e88-8fa6-0d8a59cb2100" alt="Descriptive Alt Text" width="500">
+  <img src="https://github.com/user-attachments/assets/b5bfa381-4c95-4e88-8fa6-0d8a59cb2100" alt="Descriptive Alt Text" width="1000">
 </p>
 
 <h2 align="center">
