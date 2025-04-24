@@ -35,6 +35,7 @@ AIGCIQA2023K/
 **1.Install the required packages**  
 
 `pip install -r requirements.txt`
+
 **2.Modify the dataset directory in the configuration file and specify the configuration file for the parameters of the main function**  
 
 `huggingface-cli login --token <your_token>`
