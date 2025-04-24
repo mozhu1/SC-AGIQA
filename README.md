@@ -1,3 +1,6 @@
+#Text-Visual Semantic Constrained AI-Generated Image Quality Assessment
+---
+
 ## SC-AGIQA
 
 <center>
