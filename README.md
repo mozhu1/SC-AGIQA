@@ -13,7 +13,7 @@ Environment: Python 3.10
 cd ./SC_AGIQA
 
 pip install -r requirements.txt
-
+huggingface-cli login --token <your_token>
 python main.py
 
 # Generate descriptive prompts
