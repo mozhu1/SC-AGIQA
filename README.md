@@ -32,7 +32,8 @@ AIGCIQA2023K/
     └──...
 ```
 ## Run the code.
-'Environment: Python 3.10.15 cuda11.8'
+
+`Environment: Python 3.10.15 cuda11.8`
 
 **0.Download and extract the code**  
 
