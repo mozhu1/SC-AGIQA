@@ -1,6 +1,6 @@
 pandas
 scipy
-tochinfo
+torchinfo
 vit
 fairscale 
 timm
