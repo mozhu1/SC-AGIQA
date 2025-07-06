@@ -1,4 +1,5 @@
 # Text-Visual Semantic Constrained AI-Generated Image Quality Assessment
+[ACMMM 2025] This work has been accepted by ACM Multimedia 2025.
 
 ## Network Architecture
 <p align="center">
@@ -33,16 +34,16 @@ AIGCIQA2023K/
 
 ## Usage
 
-
 `Environment: Python 3.10.15 cuda11.8`
 
 ### Download and extract the code  
-
-`cd ./SC_AGIQA`
+```git clone https://github.com/mozhu1/SC-AGIQA.git
+cd ./SC_AGIQA```
 
 ### Install the required packages
-
-`pip install -r requirements.txt`
+```conda create -n sc_agiqa python=3.10.13 -y
+conda activate sc_agiqa
+pip install -r requirements.txt```
 
 ### Modify the dataset directory in the configuration file and specify the configuration file for the parameters of the main function  
 
