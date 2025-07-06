@@ -41,6 +41,10 @@ AIGCIQA2023K/
     └──...
 ```
 
+|Dataset|Link|
+|AGIQA-1K|[download](https://github.com/lcysyzxdxc/AGIQA-1k-Database)|
+|AGIQA-3K|[download](https://github.com/lcysyzxdxc/AGIQA-3k-Database.)|
+|AIGCIQA2023|[download](https://github.com/wangjiarui153/AIGCIQA2023)|
 ## Usage
 
 ```shell
