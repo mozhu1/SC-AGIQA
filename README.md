@@ -46,23 +46,23 @@ AIGCIQA2023K/
 Environment: Python 3.10.15 cuda11.8
 `
 
-### 1.Download and extract the code  
+### 1.Code Acquisition
 ```shell
 git clone https://github.com/mozhu1/SC-AGIQA.git
 cd ./SC_AGIQA
 ```
 
-### 2.Install the required packages
+### 2.Dependency Installation 
 ```shell
 conda create -n sc_agiqa python=3.10.13 -y
 conda activate sc_agiqa
 pip install -r requirements.txt
 ```
 
-### 3.Modify the dataset directory in the configuration file and specify the configuration file for the parameters of the main function  
+### 3.Configuration Setup 
 Before running the experiment, modify the `DATA_PATH` in your configuration file (e.g., `SC_AGIQA/configs/agiqa1k.yaml`) to point to your actual dataset location, then ensure `main.py` is configured to load this specific YAML file for parameter settings.
 
-### 4.Log in to Hugging Face in preparation for downloading the ImageReward weights
+### 4.Hugging Face Authentication  
 
 ```shell
 huggingface-cli login --token <your_token>
