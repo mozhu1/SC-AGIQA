@@ -42,9 +42,9 @@ AIGCIQA2023K/
 
 ## Usage
 
-`shell
+```shell
 Environment: Python 3.10.15 cuda11.8
-`
+```
 
 ### 1. Code Acquisition
 ```shell
