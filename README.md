@@ -90,8 +90,17 @@ huggingface-cli login --token <your_token>
 python main.py
 ```
 
+##Citation
+If you find the code helpful in your research or work, please cite the following paper(s).
 
-
+```shell
+@inproceedings{lq2025sc_agiqa,
+  title={Text-Visual Semantic Constrained AI-Generated Image Quality Assessment}, 
+  author={Qiang Li, Qingsen Yan, Haojian Huang, Peng Wu, Haokui Zhang, Yanning Zhang},
+  booktitle={Proceedings of the ACM International Conference on Multimedia},
+  year={2025}
+}
+```
 
 
 
