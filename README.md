@@ -15,8 +15,19 @@
   <img src="https://github.com/user-attachments/assets/b5bfa381-4c95-4e88-8fa6-0d8a59cb2100" alt="Descriptive Alt Text" width="1000">
 </p>
 
-## DATASET
+## DATASETS
+
+### Download datasets
+
+|Dataset|Link|
+| ---------------------------------- | :------------------------------: |
+|AGIQA-1K|[download](https://github.com/lcysyzxdxc/AGIQA-1k-Database)|
+|AGIQA-3K|[download](https://github.com/lcysyzxdxc/AGIQA-3k-Database.)|
+|AIGCIQA2023|[download](https://github.com/wangjiarui153/AIGCIQA2023)|
+
+### Descriptive prompts
 We have provided documents containing descriptive prompts in the folders of AGIQA-1K, AGIQA-3K, and AIGCIQA2023. When using them, you just need to set up the paths according to the figure above and change the dataset paths in the configuration files.
+
 ```shell 
 AGIQ1K/
 ├── AIGC-1K_answer.csv
@@ -41,11 +52,7 @@ AIGCIQA2023K/
     └──...
 ```
 
-|Dataset|Link|
-| ---------------------------------- | :------------------------------: |
-|AGIQA-1K|[download](https://github.com/lcysyzxdxc/AGIQA-1k-Database)|
-|AGIQA-3K|[download](https://github.com/lcysyzxdxc/AGIQA-3k-Database.)|
-|AIGCIQA2023|[download](https://github.com/wangjiarui153/AIGCIQA2023)|
+
 
 ## Usage
 
