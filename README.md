@@ -1,7 +1,10 @@
 # Text-Visual Semantic Constrained AI-Generated Image Quality Assessment
 [![Platform](https://img.shields.io/badge/Platform-linux-lightgrey?logo=linux)](https://www.linux.org/)
+
 [![Python](https://img.shields.io/badge/Python-3.10.15%2B-orange?logo=python)](https://www.python.org/)
+
 [![Pytorch](https://img.shields.io/badge/PyTorch2.10%2B-brightgree?logo=PyTorch)](https://pytorch.org/)
+
 [![arXiv](https://img.shields.io/badge/build-paper-red?logo=arXiv&label=arXiv)](https://arxiv.org/abs/)   
 
 [ACMMM 2025] This work has been accepted by ACM Multimedia 2025.
