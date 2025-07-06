@@ -49,7 +49,7 @@ Environment: Python 3.10.15 cuda11.8
 ### 1. Code Acquisition
 ```shell
 git clone https://github.com/mozhu1/SC-AGIQA.git
-cd ./SC_AGIQA
+cd ./SC-AGIQA-main
 ```
 
 ### 2. Dependency Installation 
@@ -60,7 +60,7 @@ pip install -r requirements.txt
 ```
 
 ### 3. Configuration Setup 
-Before running the experiment, modify the `DATA_PATH` in your configuration file (e.g., `SC_AGIQA/configs/agiqa1k.yaml`) to point to your actual dataset location, then ensure `main.py` is configured to load this specific YAML file for parameter settings.
+Before running the experiment, modify the `DATA_PATH` in your configuration file (e.g., `/configs/agiqa1k.yaml`) to point to your actual dataset location, then ensure `main.py` is configured to load this specific YAML file for parameter settings.
 
 ### 4. Hugging Face Authentication  
 
