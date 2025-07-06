@@ -31,26 +31,26 @@ AIGCIQA2023K/
     └──...
 ```
 <h2 align="center">
-Run the code
+##Usage
 </h2>
 
 `Environment: Python 3.10.15 cuda11.8`
 
-##Download and extract the code  
+###Download and extract the code  
 
 `cd ./SC_AGIQA`
 
-##Install the required packages
+###Install the required packages
 
 `pip install -r requirements.txt`
 
-##Modify the dataset directory in the configuration file and specify the configuration file for the parameters of the main function  
+###Modify the dataset directory in the configuration file and specify the configuration file for the parameters of the main function  
 
-##Log in to Hugging Face in preparation for downloading the model weights
+###Log in to Hugging Face in preparation for downloading the model weights
 
 `huggingface-cli login --token <your_token>`
 
-##Run main.py
+###Train and test
 
 `python main.py`
 
