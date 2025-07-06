@@ -52,6 +52,7 @@ pip install -r requirements.txt
 ```
 
 ### 3.Modify the dataset directory in the configuration file and specify the configuration file for the parameters of the main function  
+Before running the experiment, modify the `DATA_PATH` in your configuration file (e.g., `SC_AGIQA/configs/agiqa1k.yaml`) to point to your actual dataset location, then ensure `main.py` is configured to load this specific YAML file for parameter settings.
 
 ### 4.Log in to Hugging Face in preparation for downloading the ImageReward weights
 
@@ -65,9 +66,9 @@ huggingface-cli login --token <your_token>
 python main.py
 `
 
-<h2 align="center">
-Generate descriptive prompts
-</h2>
+
+## Generate descriptive prompts(optional)
+
 
 If you want to generate descriptive prompts on your own, we provide a code example named `chat_with_doubao.py` based on the AGIQA-1K dataset. The same principle applies to other datasets. The API can be obtained from this link https://www.volcengine.com/experience/ark
 
