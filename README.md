@@ -1,11 +1,11 @@
-#Text-Visual Semantic Constrained AI-Generated Image Quality Assessment
+# Text-Visual Semantic Constrained AI-Generated Image Quality Assessment
 
-##Network Architecture
+## Network Architecture
 <p align="center">
   <img src="https://github.com/user-attachments/assets/b5bfa381-4c95-4e88-8fa6-0d8a59cb2100" alt="Descriptive Alt Text" width="1000">
 </p>
 
-##DATASET
+## DATASET
 We have provided documents containing descriptive prompts in the folders of AGIQA-1K, AGIQA-3K, and AIGCIQA2023. When using them, you just need to set up the paths according to the figure above and change the dataset paths in the configuration files.
 ```
 AGIQ1K/
@@ -30,27 +30,27 @@ AIGCIQA2023K/
     │   └──...
     └──...
 ```
-<h2 align="center">
-##Usage
-</h2>
+
+## Usage
+
 
 `Environment: Python 3.10.15 cuda11.8`
 
-###Download and extract the code  
+### Download and extract the code  
 
 `cd ./SC_AGIQA`
 
-###Install the required packages
+### Install the required packages
 
 `pip install -r requirements.txt`
 
-###Modify the dataset directory in the configuration file and specify the configuration file for the parameters of the main function  
+### Modify the dataset directory in the configuration file and specify the configuration file for the parameters of the main function  
 
-###Log in to Hugging Face in preparation for downloading the model weights
+### Log in to Hugging Face in preparation for downloading the model weights
 
 `huggingface-cli login --token <your_token>`
 
-###Train and test
+### Train and test
 
 `python main.py`
 
