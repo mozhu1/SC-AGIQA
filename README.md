@@ -1,4 +1,5 @@
 # Text-Visual Semantic Constrained AI-Generated Image Quality Assessment
+[![Platform](https://img.shields.io/badge/Platform-linux-lightgrey?logo=linux)](https://www.linux.org/)
 [ACMMM 2025] This work has been accepted by ACM Multimedia 2025.
 
 ## Network Architecture
@@ -56,15 +57,15 @@ Before running the experiment, modify the `DATA_PATH` in your configuration file
 
 ### 4.Log in to Hugging Face in preparation for downloading the ImageReward weights
 
-`shell
+```shell
 huggingface-cli login --token <your_token>
-`
+```
 
 ### 5.Train and test
 
-`shell
+```shell
 python main.py
-`
+```
 
 
 ## Generate descriptive prompts(optional)
