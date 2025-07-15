@@ -5,7 +5,7 @@
 
 [![Pytorch](https://img.shields.io/badge/PyTorch2.10%2B-brightgree?logo=PyTorch)](https://pytorch.org/)
 
-[![arXiv](https://img.shields.io/badge/build-paper-red?logo=arXiv&label=arXiv)](https://arxiv.org/abs/)   
+[![arXiv](https://img.shields.io/badge/build-paper-red?logo=arXiv&label=arXiv)](http://arxiv.org/abs/2507.10432)   
 
 [ACMMM 2025] This work has been accepted by ACM Multimedia 2025.
 
