@@ -69,6 +69,11 @@ def initialize_model_and_optimizer(config):
     scheduler = optim.lr_scheduler.StepLR(optimizer, step_size=config.TRAIN.LR_SCHEDULER.DECAY_EPOCHS, gamma=0.1)
     return model, optimizer, scheduler, device
 def train_epoch(epoch, model, data_loader, optimizer, config, device, lr_scheduler):
+    if config.AMP_ENABLE:
+        from torch.cuda.amp import GradScaler, autocast
+        scaler = GradScaler() 
+    else:
+        scaler = None  
     model.train()   
     model.blip_encoder.visual_encoder.eval()
     model.blip_encoder.reward.train()
@@ -88,27 +93,51 @@ def train_epoch(epoch, model, data_loader, optimizer, config, device, lr_schedul
             parms.requires_grad_(False)
             if image_fix_num in name:
                 break
+    
     running_loss = 0.0
     total_samples = 0
     num_steps = len(data_loader)
+    
     with tqdm(data_loader, desc=f"Epoch {epoch}/{config.TRAIN.EPOCHS}", unit="batch") as pbar:
-        for batch_idx, (images, labels,consis) in enumerate(pbar):
-            images, labels = images.to(device, non_blocking=True).contiguous() , labels.to(device, non_blocking=True).contiguous()  
-            with torch.autograd.detect_anomaly():
-                outputs = model(images,consis)
+        for batch_idx, (images, labels, consis) in enumerate(pbar):
+            images = images.to(device, non_blocking=True).contiguous()
+            labels = labels.to(device, non_blocking=True).contiguous()
+            
+            optimizer.zero_grad()  
+            if config.AMP_ENABLE:
+                with autocast():
+                    outputs = model(images, consis)
+                    labels.unsqueeze_(dim=-1)
+                    loss = compute_loss(outputs, labels) / config.TRAIN.ACCUMULATION_STEPS
+                    loss = loss.contiguous()
+            else:
+                outputs = model(images, consis)
                 labels.unsqueeze_(dim=-1)
-                loss = compute_loss(outputs, labels) / config.TRAIN.ACCUMULATION_STEPS 
-                loss = loss.contiguous()  
+                loss = compute_loss(outputs, labels) / config.TRAIN.ACCUMULATION_STEPS
+                loss = loss.contiguous()
+
+            if config.AMP_ENABLE:
+                scaler.scale(loss).backward()
+            else:
                 loss.backward() 
+
             if (batch_idx + 1) % config.TRAIN.ACCUMULATION_STEPS == 0:
-                optimizer.step()  
-                optimizer.zero_grad() 
+                if config.AMP_ENABLE:
+                    scaler.step(optimizer) 
+                    scaler.update()        
+                else:
+                    optimizer.step()  
+                
+                optimizer.zero_grad()  
+
                 lr_scheduler.step_update(
                     (epoch * num_steps + batch_idx) // config.TRAIN.ACCUMULATION_STEPS
                 )
+            
             running_loss += loss.item() * images.size(0) * config.TRAIN.ACCUMULATION_STEPS
             total_samples += images.size(0)
             pbar.set_postfix({"Loss": loss.item() * config.TRAIN.ACCUMULATION_STEPS})
+    
     avg_loss = running_loss / total_samples
     print(f"训练 Epoch [{epoch}/{config.TRAIN.EPOCHS}] 完成, 平均 Loss: {avg_loss:.4f}")
     return avg_loss
