@@ -140,6 +140,7 @@ def validate_epoch(model, data_loader, config, device,epoch):
     total_samples = 0
     all_preds = []
     all_labels = []
+    best_pearson_avg=0
     with torch.no_grad(): 
         for images, labels,consis in data_loader:
             images, labels = images.to(device, non_blocking=True), labels.to(device, non_blocking=True)#,consis.to(device, non_blocking=True),consis
@@ -153,8 +154,12 @@ def validate_epoch(model, data_loader, config, device,epoch):
     all_preds = torch.cat(all_preds, dim=0).cpu()  
     all_labels = torch.cat(all_labels, dim=0).cpu().unsqueeze(1)
     if config.DATA.PATCH_NUM > 1:
-        batch_size = all_preds.shape[0] // config.DATA.PATCH_NUM
-        all_preds = all_preds.view(batch_size, config.DATA.PATCH_NUM, -1)  
+        ###截断最后一组patch_num防止报错
+        valid_len = (all_preds.shape[0] // config.DATA.PATCH_NUM) * config.DATA.PATCH_NUM
+        all_preds = all_preds[:valid_len]
+        all_labels = all_labels[:valid_len]
+        batch_size = valid_len // config.DATA.PATCH_NUM
+        all_preds = all_preds.view(batch_size, config.DATA.PATCH_NUM, -1)
         all_labels = all_labels.view(batch_size, config.DATA.PATCH_NUM, -1)  
         avg_preds = all_preds.mean(dim=1)  
         avg_labels = all_labels.mean(dim=1)  
@@ -168,6 +173,10 @@ def validate_epoch(model, data_loader, config, device,epoch):
             avg_preds.float().detach(), 
             avg_labels.float().detach() 
         ).item()
+        if pearson_avg>best_pearson_avg:
+            best_pearson_avg=pearson_avg
+            #torch.save(model.state_dict(), f'./checkpoints_2023k/blip_model_weights{best_pearson_avg}.pth')
+
         print(f"Epoch:{epoch},平均分数的斯皮尔曼系数: {spearman_avg:.4f}, 皮尔逊相关系数: {pearson_avg:.4f}")
     spearman_corr = torchmetrics.functional.spearman_corrcoef(
         avg_preds.float().detach(), 
@@ -180,7 +189,6 @@ def validate_epoch(model, data_loader, config, device,epoch):
     avg_loss = running_loss / total_samples
     print(f"验证损失: {avg_loss:.4f}")
     return avg_loss, spearman_corr, pearson_corr
-
 
 def plot_values(list1, list2):
     if not list1 or not list2:
