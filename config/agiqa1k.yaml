@@ -1,6 +1,6 @@
 DATA:
   DATASET: agiqa1k
-  BATCH_SIZE: 12 #16
+  BATCH_SIZE: 4 #12 #16
   PATCH_NUM: 12  #12
   DATA_PATH: '/public/home/mozhu/AGIQA-1k-Database-main'
   NUM_WORKERS: 8
